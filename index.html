@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Certificates</h1>
+    </header>
+    
+    <div class="gallery">
+        <div class="certificate" onclick="openModal('C Certificate.png')">
+            <img src="C Certificate.png" alt="Certificate 1">
+        </div>
+        <div class="certificate" onclick="openModal('DBMS certificate.jpg')">
+            <img src="DBMS certificate.jpg" alt="Certificate 2">
+        </div>
+        <div class="certificate" onclick="openModal('cert3.jpg')">
+            <img src="cert3.jpg" alt="Certificate 3">
+        </div>
+    </div>
+    
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    
+    <script>
+        function openModal(src) {
+            document.getElementById('modal').style.display = 'flex';
+            document.getElementById('modal-img').src = src;
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
